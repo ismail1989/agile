@@ -1,0 +1,57 @@
+en:
+  company:
+    name: "Agile Academy"
+    intro: "Agile Academy aims to build a conscious generation that seeks to build its future with science and knowledge and thus begin and commit by fortifying our students with international certificates proving their ability to do this significant job."
+    address: " 221,254,293,349 HanPlus Tower 150, Dogan Arasli Bolv, Esenyurt - Istanbul"
+    telephone1: "Phone1 : +90 212 620 4041"
+    telephone2: "Phone2 : +90 212 699 9009"
+    mobile1: "mobile1 : +90 553 768 1142"
+    mobile2: "mobile2 : +90 505 022 3522"
+    email: "E-mail : info@agile-tec.com"
+    
+  mainmenu:
+    homename: "Home"
+    courses: "Paths"
+    aboutname: "About"
+    blog: "Blog"
+    login: "Log In"
+    creataccount: "Create account"
+    dashboard: "User Dashboard"
+  
+  footermenu:
+    header: "General Links"
+    career: "Career"
+    policy: "Privacy Policy"
+    terms: "Terms & Conditions"
+    faqs: "Frequently Ask"
+    stories: "Success Stories"
+
+
+  blog:
+    newblogtitle: "New Blog Article"
+
+
+  tronname: "Agile Academy"
+  membername: "Members "
+  logingname: "Log In"
+  createusergname: "Create Account"
+  dashboardgname: "My Dashboard"
+  logoutgname: "Log Out"
+  searchbutton: "Submit"
+  searchplaceholder: "Search"
+  newblogbutton: "New Blog"
+
+  cta:
+    homecta1: "Launch Your Success"
+    livecta1: "Join Virtual Class"
+    livectaintro: "Dear Student, you can join you virtual classroom from here."
+    
+    
+  featured:
+    certificate-h1: "Global Certificate"
+    certificate-txt: "We worked that out just for you, Since we know how important for you to be armed with certifications form a global awarding bodies like AWS, google, Hotspot, BTEC and more"
+    pathsway-h1: "Pathways Learning"
+    pathsway-txt: "Agile's teachers and academies have made the necessary preparations to get practical and required work experience in marketing, electronic maintenance, site programming, photography and more."
+    distancelearning-h1: "Distance learning platforms"
+    distancelearning-txt: "Agile provides you with all the necessary platforms and tools of distance education ready for you to access knowledge before you reach our seats, applying our methodology - success no less -"
+    readmore: ""

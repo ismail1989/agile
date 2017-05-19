@@ -1,0 +1,19 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+
+  Use Font Awesome icons (default)
+  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
+  =require twitter-bootstrap-static/fontawesome
+  */
+@media (max-width: 500px) {
+  
+  /* this to show mobile menu in new block */
+  #bs-example-navbar-collapse-1{
+    clear: both ; 
+  }
+  
+  /* this to remove right padding in mobile menu */
+  .asd {
+    padding-right: 0px !important
+  }
+}
