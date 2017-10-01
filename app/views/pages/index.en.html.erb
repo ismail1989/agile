@@ -1,172 +1,499 @@
-<!-- Page Content -->
-<div class="container">
-    <!-- Heading Row -->
-    <div class="row">
-        <div class="col-md-8">
-            <img class="img-responsive img-rounded" src="http://placehold.it/900x300" alt="">
-        </div>
-        <!-- /.col-md-8 -->
-        <div class="col-md-4">
-            <h1><%= t('tronname') %></h1>
-            <p><%= t('company.intro') %></p>
-            <a class="btn btn-primary btn-lg" href="#"><%= t('cta.homecta1') %></a>
-        </div>
-        <!-- /.col-md-4 -->
-    </div>
-    <!-- /.row -->
-    
-    
-    <!-- Heading Row -->
-    <hr>
-    <div class="row well">
-        <div class="col-md-8">
-            <p style="font-family:Tahoma, Geneva, sans-serif; font-size:16px"><%= t('cta.livectaintro') %></p>
-        </div>
-        <!-- /.col-md-8 -->  
-        <div class="col-md-4" align="center">
-            <!-- <img class="img-responsive img-rounded" src="http://placehold.it/900x300" alt=""> -->
-            <a class="btn btn-primary" href="#"><%= t('cta.livecta1') %></a>
-        </div>
-        <!-- /.col-md-4 -->    </div>
-    <!-- /.row --> 
-    
-    
-    <!-- Content Row -->
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Heading 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.</p>
-            <a class="btn btn-default" href="#">More Info</a>
-        </div>
-        <!-- /.col-md-4 -->
-        <div class="col-md-4">
-            <h2>Heading 2</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.</p>
-            <a class="btn btn-default" href="#">More Info</a>
-        </div>
-        <!-- /.col-md-4 -->
-        <div class="col-md-4">
-            <h2>Heading 3</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.</p>
-            <a class="btn btn-default" href="#">More Info</a>
-        </div>
-        <!-- /.col-md-4 -->
-    </div>
-    <!-- /.row -->
-    
-    
-    <!-- Page Header -->
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">Page Heading
-                <small>Secondary Text</small>
-            </h1>
-        </div>
-    </div>
-    <!-- /.row -->
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-        </div>
-        <!-- /.row -->
+<style>
+#blog-listing-medium .post {
+    margin-bottom: 60px;
+}
+#blog-listing-medium .post .image {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+#blog-listing-medium .post h2 {
+    text-transform: uppercase;
+    margin: 0 0 10px;
+    font-size: 24px;
+    letter-spacing: .08em;
+}
+#blog-listing-medium .post h2 a {
+    color: #555;
+}
+#blog-listing-medium .post .intro {
+    text-align: left;
+    color: #000 !important;
+}
+#blog-listing-medium .post .read-more {
+    text-align: right;
+}
+.btn-template-main {
+    color: #38a7bb;
+    background-color: #fff;
+    border-color: #38a7bb;
+}
+.btn {
+    font-weight: 700;
+    font-family: "Roboto",Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    padding: 6px 12px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    border-radius: 0;
+}
+.panel.sidebar-menu {
+    background: #fff;
+    margin: 0 0 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.panel.sidebar-menu .panel-heading {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    background: none;
+    padding: 0;
+    letter-spacing: .08em;
+    border-bottom: none;
+}
+.panel.sidebar-menu .panel-heading h1, .panel.sidebar-menu .panel-heading h2, .panel.sidebar-menu .panel-heading h3, .panel.sidebar-menu .panel-heading h4, .panel.sidebar-menu .panel-heading h5 {
+    display: inline-block;
+    border-bottom: solid 5px #38a7bb;
+    line-height: 1.1;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+.panel.sidebar-menu h3 {
+    padding: 5px 0;
+    margin: 0;
+}
+.panel.sidebar-menu .panel-body {
+    padding: 0;
+}
+#blog-listing-medium .post .author-category {
+    float: left;
+    color: #999;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: .08em;
+}
+p {
+    margin: 0 0 10px;
+}
+@media (min-width: 768px)
+{
+#blog-listing-medium .post .date-comments {
+    text-align: right;
+}}
+</style>
 
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-        </div>
+<div class="checkbox">
+  <label>
+    <input type="checkbox" data-toggle="toggle" name="Active" data-on=" Activated"  data-off=" ">
+    <input type="checkbox" data-toggle="toggle" name="Active" data-on=" "  data-off="Deactivated">
+    Option one is enabled
+  </label>
+</div>
+<div class="checkbox disabled">
+  <label>
+    <input type="checkbox" disabled data-toggle="toggle">
+    Option two is disabled
+  </label>
+</div>
 
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-        </div>
-        <!-- /.row -->
-        <!-- Call to Action Well -->
-            <hr>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="well text-center">
-                        This is a well that is a great spot for a business tagline or phone number for easy access!
+
+
+
+
+<input type="checkbox" data-toggle="toggle" data-style="ios" data-size="normal" data-on="Activated" data-off="&#8203;" class="switch switch-on toggle" checked value="true" id="toggle1">
+<input type="checkbox" data-toggle="toggle" data-style="ios" data-size="normal" data-on="Dactivated" data-off="&#8203;" class="switch switch-off toggle" id="toggle2">
+
+
+<script>
+    $("#toggle1").change(function() {
+  if ($(this).is(":checked")) {
+      $("#toggle2").bootstrapToggle('off');
+  }
+});
+$("#toggle2").change(function() {
+  if ($(this).is(":checked")) {
+      $("#toggle1").bootstrapToggle('off');
+  }
+});
+</script>
+
+
+ <div id="content">
+            <div class="container">
+                <div class="row">
+                  <!-- *** LEFT COLUMN ***
+			_________________________________________________________ -->
+
+                    <div class="col-md-9" id="blog-post">
+
+
+                        <p class="text-muted text-uppercase mb-small text-right">By <a href="#">John Slim</a> | June 20, 2013</p>
+                        
+                        
+                            <p>
+                                <img src="http://www.qygjxz.com/data/out/240/3848765-wallpaper-images-download.jpg" class="img-responsive" alt="Example blog post alt">
+                            </p>
+                        <p class="lead">This is the lead paragraph of the article. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget.</p>
+
+                        <div id="post-content">
+                            <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
+                                semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean
+                                fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+
+
+                            <h2>Header Level 2</h2>
+
+                            <ol>
+                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                                <li>Aliquam tincidunt mauris eu risus.</li>
+                            </ol>
+
+                            <blockquote>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada
+                                    tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
+                            </blockquote>
+
+                            <h3>Header Level 3</h3>
+
+                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam</p>
+
+                            
+                        </div>
+                        <!-- /#post-content -->
+
+
                     </div>
+                    <!-- /#blog-post -->
+
+                    <!-- *** LEFT COLUMN END *** -->
+
+                    <!-- *** RIGHT COLUMN ***
+			 _________________________________________________________ -->
+
+                    <div class="col-md-3">
+
+                        <!-- *** MENUS AND WIDGETS ***
+ _________________________________________________________ -->
+                        <div class="panel panel-default sidebar-menu">
+
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Text widget</h3>
+                            </div>
+
+                            <div class="panel-body text-widget">
+                                <p>Improved own provided blessing may peculiar domestic. Sight house has sex never. No visited raising gravity outward subject my cottage mr be. Hold do at tore in park feet near my case.
+                                </p>
+
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default sidebar-menu">
+
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Search</h3>
+                            </div>
+
+                            <div class="panel-body">
+                                <form role="search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search">
+                                        <span class="input-group-btn">
+
+		    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+
+		</span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default sidebar-menu">
+
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Categories</h3>
+                            </div>
+
+                            <div class="panel-body">
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="blog.html">Webdesign</a>
+                                    </li>
+                                    <li class="active"><a href="blog.html">Tutorials</a>
+                                    </li>
+                                    <li><a href="blog.html">Print</a>
+                                    </li>
+                                    <li><a href="blog.html">Our tips</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="panel sidebar-menu">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Tags</h3>
+                            </div>
+
+                            <div class="panel-body">
+                                <ul class="tag-cloud">
+                                    <li><a href="#"><i class="fa fa-tags"></i> html5</a> 
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-tags"></i> css3</a> 
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-tags"></i> jquery</a> 
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-tags"></i> ajax</a> 
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-tags"></i> php</a> 
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-tags"></i> responsive</a> 
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-tags"></i> visio</a> 
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-tags"></i> bootstrap</a> 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- *** MENUS AND FILTERS END *** -->
+
+                    </div>
+                    <!-- /.col-md-3 -->
+
+                    <!-- *** RIGHT COLUMN END *** -->
+
                 </div>
-                <!-- /.col-lg-12 -->
+                <!-- /.row -->
             </div>
-            <hr>
-    </div>
+            <!-- /.container -->
+        </div>
+        <!-- /#content -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+<div class="jumbotron">
+    <div class="col-md-4">
+   <section class="customer-logos slider">
+      <div class="slide"><img src="https://www.solodev.com/assets/carousel/image1.png"></div>
+      <div class="slide"><img src="https://www.solodev.com/assets/carousel/image2.png"></div>
+      <div class="slide"><img src="https://www.solodev.com/assets/carousel/image3.png"></div>
+      <div class="slide"><img src="https://www.solodev.com/assets/carousel/image4.png"></div>
+      <div class="slide"><img src="https://www.solodev.com/assets/carousel/image5.png"></div>
+      <div class="slide"><img src="https://www.solodev.com/assets/carousel/image6.png"></div>
+      <div class="slide"><img src="https://www.solodev.com/assets/carousel/image7.png"></div>
+      <div class="slide"><img src="https://www.solodev.com/assets/carousel/image8.png"></div>
+   </section></div>
+</div>
+<script>
+    $(document).ready(function(){
+    $('.customer-logos').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+ <!--/ Contact-->
+    <!-- Start Map Section -->
+    <div id="google-map" style="padding: 0;height: 400px;"></div>
+    <!-- End Map Section -->
+
+  
+  <!-- Google Maps API -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJ3SgEzHYNAWwXh0HCfco5shYfifn3oOM"></script>
+      <script type="text/javascript">
+      var map;
+      var defult = new google.maps.LatLng(41.033016, 28.681305,13.67);
+      var mapCoordinates = new google.maps.LatLng(41.033016, 28.681305,13.67); 
+      
+      
+      var markers = [];
+      var image = new google.maps.MarkerImage(
+        'url(<%= asset_path 'Map-Marker-PNG-Pic.png'%>)',
+        new google.maps.Size(84, 70),
+        new google.maps.Point(0, 0),
+        new google.maps.Point(60, 60)
+      );
+      
+      function addMarker() {
+        markers.push(new google.maps.Marker({
+          position: defult,
+          raiseOnDrag: false,
+          icon: image,
+          map: map,
+          draggable: false
+        }
+      ));
+        
+      }
+      
+      function initialize() {
+        var mapOptions = {
+          backgroundColor: "#ffffff",
+          zoom: 14,
+          disableDefaultUI: true,
+          center: mapCoordinates,
+          zoomControl: false,
+          scaleControl: false,
+          scrollwheel: false,
+          disableDoubleClickZoom: true,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          styles: [{
+            "featureType": "landscape.natural",
+            "elementType": "geometry.fill",
+            "stylers": [{
+              "color": "#ffffff"
+            }
+                       ]
+          }
+                   , {
+                     "featureType": "landscape.man_made",
+                     "stylers": [{
+                       "color": "#ffffff"
+                     }
+                                 , {
+                                   "visibility": "off"
+                                 }
+                                ]
+                   }
+                   , {
+                     "featureType": "water",
+                     "stylers": [{
+                       "color": "#80C8E5"
+                     }
+                                 , {
+                                   "saturation": 0
+                                 }
+                                ]
+                   }
+                   , {
+                     "featureType": "road.arterial",
+                     "elementType": "geometry",
+                     "stylers": [{
+                       "color": "#999999"
+                     }
+                                ]
+                   }
+                   , {
+                     "elementType": "labels.text.stroke",
+                     "stylers": [{
+                       "visibility": "off"
+                     }
+                                ]
+                   }
+                   , {
+                     "elementType": "labels.text",
+                     "stylers": [{
+                       "color": "#333333"
+                     }
+                                ]
+                   }
+                   
+                   , {
+                     "featureType": "road.local",
+                     "stylers": [{
+                       "color": "#dedede"
+                     }
+                                ]
+                   }
+                   , {
+                     "featureType": "road.local",
+                     "elementType": "labels.text",
+                     "stylers": [{
+                       "color": "#666666"
+                     }
+                                ]
+                   }
+                   , {
+                     "featureType": "transit.station.bus",
+                     "stylers": [{
+                       "saturation": -57
+                     }
+                                ]
+                   }
+                   , {
+                     "featureType": "road.highway",
+                     "elementType": "labels.icon",
+                     "stylers": [{
+                       "visibility": "off"
+                     }
+                                ]
+                   }
+                   , {
+                     "featureType": "poi",
+                     "stylers": [{
+                       "visibility": "off"
+                     }
+                                ]
+                   }
+                   
+                  ]
+          
+        }
+            ;
+        map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
+        addMarker();
+        
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
